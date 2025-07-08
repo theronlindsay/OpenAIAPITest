@@ -14,7 +14,7 @@ body {
   padding-top: 40px;
   padding-bottom: 20px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f7cac9 0%, #92a8d1 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
 }
 
 .container {
@@ -22,42 +22,44 @@ body {
   margin: 0 auto;
   width: 90%;
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(60, 60, 120, 0.13);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   padding: 32px 24px 24px 24px;
   text-align: center;
-  border: 2px solid #b4c5e4;
+  border: 3px solid #ff6b6b;
 }
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  color: #5e548e;
+  color: #ff6b6b;
   margin: 0;
   line-height: 1.2;
   font-size: 58px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 p {
-  color: #736c9b;
+  color: #4ecdc4;
   margin-top: 0;
   font-size: 18px;
+  font-weight: 600;
 }
 
 #response {
-  color: #22223b;
+  color: #2d3748;
   margin-top: 28px;
   padding: 24px;
   text-align: left;
-  border-radius: 10px;
+  border-radius: 16px;
   white-space: pre-wrap;
-  background-color: #e0e7ff;
-  box-shadow: 0 2px 8px rgba(94, 84, 142, 0.08);
+  background: linear-gradient(135deg, #fff5f5 0%, #f0fff4 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   min-height: 120px; 
   font-size: 18px;
   line-height: 1.5;
-  border: 1.5px solid #b4aee8;
+  border: 3px solid #4ecdc4;
 }
 
 #icebreaker-buttons {
@@ -72,31 +74,119 @@ p {
 #icebreaker-buttons button {
   flex: 1 1 0;
   font-size: 17px;
-  padding: 12px 0; /* Remove horizontal padding to allow more space for content */
-  background: linear-gradient(to bottom, #f3e8ff 0%, #e0e7ff 100%);
-  color: #5e548e;
-  border: solid 2px #e0e7ff;
-  border-radius: 8px;
+  padding: 16px 12px;
+  color: white;
+  border: none;
+  border-radius: 16px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(180, 197, 228, 0.10);
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   outline: none;
   min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
 }
 
-#icebreaker-buttons button i {
-  margin-right: 0; /* Remove margin, gap handles spacing */
+/* Individual button colors */
+#iceBtn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+}
+
+#factBtn {
+  background: linear-gradient(135deg, #4ecdc4 0%, #6dd5db 100%);
+}
+
+#jokeBtn {
+  background: linear-gradient(135deg, #ffe66d 0%, #ffed8a 100%);
+  color: #2d3748 !important;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+#weatherBtn {
+  background: linear-gradient(135deg, #45b7d1 0%, #6cc6e6 100%);
 }
 
 #icebreaker-buttons button:hover {
-  background: linear-gradient(to bottom, #e0e7ff 0%, #f3e8ff 100%);
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#iceBtn:hover {
+  background: linear-gradient(135deg, #ff5252 0%, #ff7979 100%);
+}
+
+#factBtn:hover {
+  background: linear-gradient(135deg, #26c6da 0%, #4dd0e1 100%);
+}
+
+#jokeBtn:hover {
+  background: linear-gradient(135deg, #ffd54f 0%, #ffee58 100%);
+}
+
+#weatherBtn:hover {
+  background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+}
+
+/* Personality Settings - Inline Styles */
+.personality-settings-inline {
+  margin-top: 24px;
+  background: linear-gradient(135deg, #f8f4ff 0%, #f0f8ff 100%);
+  border: 3px solid #9c27b0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(156, 39, 176, 0.15);
+}
+
+.personality-settings-inline h3 {
+  margin: 0 0 16px 0;
+  color: #9c27b0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.personality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.personality-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid transparent;
+}
+
+.personality-option:hover {
+  background: rgba(156, 39, 176, 0.1);
+  border-color: #9c27b0;
+  transform: translateY(-1px);
+}
+
+.personality-option input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.3);
+  cursor: pointer;
+  accent-color: #9c27b0;
+}
+
+.personality-option span {
+  color: #2d3748;
+  font-size: 14px;
 }
 
 .context-dropdown {
@@ -130,12 +220,26 @@ p {
   margin-top: 32px;
   text-align: center;
   font-size: 0.95em;
-  color: #888;
+  color: #45b7d1;
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
   #icebreaker-buttons {
     flex-direction: column;
     gap: 10px;
+  }
+  
+  .personality-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .personality-option {
+    padding: 8px 10px;
+  }
+  
+  .personality-option span {
+    font-size: 13px;
   }
 }

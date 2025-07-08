@@ -6,7 +6,6 @@
   <title>🧊 Fillr App</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -15,18 +14,86 @@
     <!-- Icebreaker buttons -->
     <div id="icebreaker-buttons">
       <button type="button" id="iceBtn">
-        <i class="fa-regular fa-comments"></i> Icebreaker
+        💬 Icebreaker
       </button>
       <button type="button" id="factBtn">
-        <i class="fa-solid fa-lightbulb"></i> Weird Fact
+        🤯 Weird Fact
       </button>
       <button type="button" id="jokeBtn">
-        <i class="fa-regular fa-face-laugh"></i> Joke
+        😂 Joke
       </button>
       <button type="button" id="weatherBtn">
-        <i class="fa-solid fa-cloud-sun"></i> Weather
+        🌈 Weather
       </button>
     </div>
+    
+    <!-- Personality Settings - Inline -->
+    <div class="personality-settings-inline">
+      <h3>🎭 Personality Settings</h3>
+      <div class="personality-grid">
+        <label class="personality-option">
+          <input type="checkbox" id="funny" value="funny">
+          <span>😄 Funny & Witty</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="sassy" value="sassy">
+          <span>💅 Sassy & Bold</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="blunt" value="blunt">
+          <span>🎯 Blunt & Honest</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="dramatic" value="dramatic">
+          <span>� Dramatic & Over-the-Top</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="nerdy" value="nerdy">
+          <span>🤓 Nerdy & Geeky</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="mysterious" value="mysterious">
+          <span>🕵️ Mysterious & Cryptic</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="energetic" value="energetic">
+          <span>⚡ Energetic & Enthusiastic</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="sarcastic" value="sarcastic">
+          <span>🙄 Sarcastic & Dry</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="formal" value="formal">
+          <span>🎩 Professional & Formal</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="quirky" value="quirky">
+          <span>� Quirky & Weird</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="casual" value="casual">
+          <span>😎 Casual & Relaxed</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="philosophical" value="philosophical">
+          <span>🧠 Philosophical & Deep</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="creative" value="creative">
+          <span>🎨 Creative & Imaginative</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="rebellious" value="rebellious">
+          <span>😈 Rebellious & Edgy</span>
+        </label>
+        <label class="personality-option">
+          <input type="checkbox" id="cheerful" value="cheerful">
+          <span>🌟 Overly Cheerful</span>
+        </label>
+      </div>
+    </div>
+    
     <div id="response">Click a button above to break the silence! 🤫</div>
     <footer class="app-footer">
       Powered by NextSpace
